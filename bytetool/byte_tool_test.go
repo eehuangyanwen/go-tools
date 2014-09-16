@@ -1,4 +1,4 @@
-package mytool
+package bytetool
 
 import (
 	"fmt"
