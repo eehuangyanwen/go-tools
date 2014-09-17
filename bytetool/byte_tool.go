@@ -23,40 +23,40 @@ func Reverse(src []byte) []byte {
 }
 
 //uint16 --> []byte
-func Uint16_to_bytes(n uint16) (result []byte) {
+func Uint16ToBytes(n uint16) (result []byte) {
 	result = make([]byte, SHORT_SIZE)
 	binary.BigEndian.PutUint16(result, n)
 	return
 }
 
 //[]byte --> uint16
-func Bytes_to_uint16(buf []byte) (n uint16) {
+func BytesToUint16(buf []byte) (n uint16) {
 	n = binary.BigEndian.Uint16(buf)
 	return
 }
 
 //uint32 --> []byte
-func Uint32_to_bytes(n uint32) (result []byte) {
+func Uint32ToBytes(n uint32) (result []byte) {
 	result = make([]byte, INT_SIZE)
 	binary.BigEndian.PutUint32(result, n)
 	return
 }
 
 //[]byte --> uint32
-func Bytes_to_uint32(buf []byte) (n uint32) {
+func BytesToUint32(buf []byte) (n uint32) {
 	n = binary.BigEndian.Uint32(buf)
 	return
 }
 
 //uint64 --> []byte
-func Uint64_to_bytes(n uint64) (result []byte) {
+func Uint64ToBytes(n uint64) (result []byte) {
 	result = make([]byte, LONG_SIZE)
 	binary.BigEndian.PutUint64(result, n)
 	return
 }
 
 //[]byte --> uint64
-func Bytes_to_uint64(buf []byte) (n uint64) {
+func BytesToUint64(buf []byte) (n uint64) {
 	n = binary.BigEndian.Uint64(buf)
 	return
 }
