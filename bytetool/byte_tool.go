@@ -11,13 +11,15 @@ const (
 	LONG_SIZE  uint32 = uint32(unsafe.Sizeof(uint64(0)))
 )
 
-func Reverse(src []byte) (dest []byte) {
+func Reverse(src []byte) []byte {
 	size := len(src)
-	dest = make([]byte, size)
 	for i := 0; i < size; i++ {
-		dest[size-1-i] = src[i]
+		src[i], src[size-i-1] = src[size-i-1], src[i]
+		if (i + 1) == size/2 {
+			break
+		}
 	}
-	return
+	return src
 }
 
 //uint16 --> []byte
